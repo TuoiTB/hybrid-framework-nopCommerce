@@ -64,9 +64,9 @@ public class BasePage {
 		return waitForAlertPresence(driver).getText();
 	}
 
-	public void senkeyToAlert(WebDriver driver, String textToSenkey) {
-		// driver.switchTo().alert().sendKeys(textToSenkey);
-		waitForAlertPresence(driver).sendKeys(textToSenkey);
+	public void sendkeyToAlert(WebDriver driver, String textToSendkey) {
+		// driver.switchTo().alert().sendKeys(textToSendkey);
+		waitForAlertPresence(driver).sendKeys(textToSendkey);
 	}
 
 	
@@ -137,7 +137,7 @@ public class BasePage {
 		getElement(driver, xpathExpression).click();
 	}
 	
-	public void senkeyToElement(WebDriver driver, String xpathExpression, String value) {
+	public void sendkeyToElement(WebDriver driver, String xpathExpression, String value) {
 		//driver.findElement(By.xpath(xpathExpression)).clear();
 		//driver.findElement(By.xpath(xpathExpression)).sendKeys(value);
 		getElement(driver, xpathExpression).clear();
@@ -252,7 +252,7 @@ public class BasePage {
 		new Actions(driver).dragAndDrop(getElement(driver, sourceXpath), getElement(driver, targetXpath)).perform();;
 	}
 	
-	public void senkeyBoardToElement(WebDriver driver, String xpathExpression, Keys key) {
+	public void sendkeyBoardToElement(WebDriver driver, String xpathExpression, Keys key) {
 		new Actions(driver).sendKeys(getElement(driver, xpathExpression), key).perform();;
 	}
 
