@@ -1,5 +1,6 @@
 package commons;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
@@ -163,7 +164,7 @@ public class BasePage {
 	public void selectItemInCustomDropdown(WebDriver driver, String xpathParent, String xpathChild, String expectedText) {
 		getElement(driver, xpathParent).click();
 		sleepInSecond(2);
-		List<WebElement> allItems = new WebDriverWait(driver, 30)
+		List<WebElement> allItems = new WebDriverWait(driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(xpathChild)));
 		for (WebElement tempElement : allItems) {
 
@@ -330,23 +331,23 @@ public class BasePage {
 	
 	
 	public void waitForElementVisible(WebDriver driver, String xpathExpression) {
-		new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(xpathExpression)));
+		new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(xpathExpression)));
 	}
 	
 	public void waitForListElementVisible(WebDriver driver, String xpathExpression) {
-		new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(xpathExpression)));
+		new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(xpathExpression)));
 	}
 	
 	public void waitForElementClickable(WebDriver driver, String xpathExpression) {
-		new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(getByXpath(xpathExpression)));
+		new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(getByXpath(xpathExpression)));
 	}
 	
 	public void waitForElementInvisible(WebDriver driver, String xpathExpression) {
-		new WebDriverWait(driver, 15).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(xpathExpression)));
+		new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(xpathExpression)));
 	}
 	
 	public Alert waitForAlertPresence(WebDriver driver) {
-		return new WebDriverWait(driver, 30).until(ExpectedConditions.alertIsPresent());
+		return new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.alertIsPresent());
 	}
 	
 	
