@@ -10,14 +10,12 @@
     </classes>
   </test>
   
-  
   <test name="Run on Firefox">
   	<parameter name = "browser" value = "Firefox"/>
  	<classes>
       <class name="com.nopcommerce.user.Level_04_Multiple_Browser"/>
     </classes>
   </test>
-  
   
   <test name="Run on Edge">
   	<parameter name = "browser" value = "Edge"/>
@@ -26,7 +24,4 @@
     </classes>
   </test>
   
-  
-  
- 
 </suite>
