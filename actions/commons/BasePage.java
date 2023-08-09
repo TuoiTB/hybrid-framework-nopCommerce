@@ -17,6 +17,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.admin.AdminLoginPageObject;
+import pageObjects.users.AddressesPageObject;
+import pageObjects.users.CustomerPageObject;
+import pageObjects.users.DownloadableProductPageObject;
+import pageObjects.users.HomePageObject;
+import pageObjects.users.PageGeneratorManager;
+import pageObjects.users.RewardPointPageObject;
+import pageUI.admin.AdminBasePageUI;
+import pageUI.users.AddressesPageUI;
+import pageUI.users.BasePageUI;
+import pageUI.users.CustomerPageUI;
+import pageUI.users.DownloadableProductPageUI;
+import pageUI.users.RewardPointPageUI;
+import pageUI.users.SideBarMyAccountPageUI;
+
 public class BasePage {
 	public static BasePage getBasePage() {
 		return new BasePage();
@@ -116,8 +131,6 @@ public class BasePage {
 			e.printStackTrace();
 		}
 	}
-	
-	
 	
 	
 	
@@ -327,7 +340,27 @@ public class BasePage {
 				+ "naturalWidth != 'undefined' && arguments[0].naturalWidth > 0", getElement(driver, xpathExpression));
 	}
 	
-	
+	public boolean isPageLoadedSuccess(WebDriver driver) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		
+		//Điều kiện 1
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+			@Override
+			public Boolean apply(WebDriver driver) {
+				return (Boolean) jsExecutor.executeScript("return (window.jQuery != null) && (jQuery.active === 0);");
+			}
+		};
+		
+		//Điều kiện 2
+		ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
+			@Override
+			public Boolean apply(WebDriver driver) {
+				return jsExecutor.executeScript("return document.readyState").toString().equals("complete");
+			}
+		};
+		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
+	}
 	
 	
 	public void waitForElementVisible(WebDriver driver, String xpathExpression) {
@@ -350,6 +383,19 @@ public class BasePage {
 		return new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.alertIsPresent());
 	}
 	
+	
+	//--------------------------------------------------
+	public HomePageObject userAbleToLogout(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
+		clickToElement(driver, BasePageUI.LOGOUT_LINK);
+		return PageGeneratorManager.getHomePage(driver);
+	}
+	
+	public AdminLoginPageObject adminAbleToLogout(WebDriver driver) {
+		waitForElementClickable(driver, AdminBasePageUI.LOGOUT_LINK);
+		clickToElement(driver,  AdminBasePageUI.LOGOUT_LINK);
+		return PageGeneratorManager.getAdminLoginPage(driver);
+	}
 	
 	
 }
