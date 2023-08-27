@@ -7,9 +7,8 @@
 <test name="Run on Chrome">
   	<parameter name = "browser" value = "Chrome"/>
  	<classes>
-      <class name="com.nopcommerce.user.Level_06_Page_Generator_Manager_01"/>
+      <class name="com.nopcommerce.user.Level_09_Switch_Page_Url"/>
     </classes>
 </test>
-
   
 </suite>

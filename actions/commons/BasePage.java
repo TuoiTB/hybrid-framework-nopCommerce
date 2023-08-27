@@ -410,6 +410,36 @@ public class BasePage {
 	public Alert waitForAlertPresence(WebDriver driver) {
 		return new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.alertIsPresent());
 	}
+	//-----------------------Switch Multiple page
+	public RewardPointPageObject openRewardPointPage(WebDriver driver) {
+		waitForElementClickable(driver, AddressesPageUI.REWARD_POINT_PAGE_LINK);
+		clickToElement(driver, AddressesPageUI.REWARD_POINT_PAGE_LINK);
+		return PageGeneratorManager.getRewardPointPage(driver);
+	}
+
+	public DownloadableProductPageObject openDownloadableProductPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.DOWNLOADABLE_PRODUCT_PAGE_LINK);
+		clickToElement(driver, BasePageUI.DOWNLOADABLE_PRODUCT_PAGE_LINK);
+		return PageGeneratorManager.getDownloadableProductPage(driver);
+	}
+	
+	public AddressesPageObject openAddressesPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.ADDRESSES_PAGE_LINK);
+		clickToElement(driver, BasePageUI.ADDRESSES_PAGE_LINK);
+		return PageGeneratorManager.getAddressesPage(driver);
+	}
+	public CustomerPageObject openCustomerPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.CUSTOMER_INFOR_PAGE_LINK);
+		clickToElement(driver, BasePageUI.CUSTOMER_INFOR_PAGE_LINK);
+		return PageGeneratorManager.getCustomerPage(driver);
+	}
+	//---------
+	public HomePageObject clickToLogoutLink(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
+		clickToElement(driver, BasePageUI.LOGOUT_LINK);
+		return PageGeneratorManager.getHomePage(driver);
+		
+	}
 	
 	
 	//--------------------------------------------------
