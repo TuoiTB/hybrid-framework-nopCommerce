@@ -84,9 +84,9 @@ public class BaseTest {
 }
 	
 	
-	protected String getEmailAddres() {
+	protected String getEmailRandom() {
 		Random rand = new Random();
-		return "john" + rand.nextInt(9999) + "@gmail.com";
+		return "automation" + rand.nextInt(9999) + "@gmail.com";
 	}
 	
 	protected void quitBrowserDriver() {

@@ -21,7 +21,7 @@ import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RegisterPageObject;
 import pageObjects.users.RewardPointPageObject;
 
-public class Level_09_Switch_Page_Url extends BaseTest {
+public class Level_10_Switch_Page_Url extends BaseTest {
 
 	private WebDriver driver;
 	private String projectPath = System.getProperty("user.dir");

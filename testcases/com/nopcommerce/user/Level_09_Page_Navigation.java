@@ -19,7 +19,7 @@ import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RegisterPageObject;
 import pageObjects.users.RewardPointPageObject;
 
-public class Level_08_Page_Navigation extends BaseTest {
+public class Level_09_Page_Navigation extends BaseTest {
 
 	private WebDriver driver;
 	private String projectPath = System.getProperty("user.dir");
