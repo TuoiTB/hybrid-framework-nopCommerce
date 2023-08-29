@@ -33,6 +33,10 @@ public class PageGeneratorManager {
 		return new AddressesPageObject(driver);
 	}
 	
+	public static OrderPageObject getOrderPage(WebDriver driver) {
+		return new OrderPageObject(driver);
+	}
+	
 	public static RewardPointPageObject getRewardPointPage(WebDriver driver) {
 		return new RewardPointPageObject(driver);
 	}

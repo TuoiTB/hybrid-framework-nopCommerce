@@ -1,7 +1,5 @@
 package com.nopcommerce.user;
 
-import java.util.Random;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -22,7 +20,7 @@ import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RegisterPageObject;
 import pageObjects.users.RewardPointPageObject;
 
-public class Level_11_Global_Contants extends BaseTest {
+public class Level_12_Dynamic_Locator_Rest_Param extends BaseTest {
 
 	private WebDriver driver;
 	private String projectPath = System.getProperty("user.dir");
@@ -83,32 +81,28 @@ public class Level_11_Global_Contants extends BaseTest {
 		Assert.assertEquals(customerPage.getEmailAttributeValue(),emailAddress);
 		
 	}
+	@Test
+	public void User_02_Switch_Page_10_to_20_pages() {
+		//Custormer infor => Downloadable products
+		downloadableProductPage = (DownloadableProductPageObject) customerPage.openDynamicSideBarPage("Downloadable products"); 
+		
+		//Downloadable products => Addresses
+		addressesPage = (AddressesPageObject) downloadableProductPage.openDynamicSideBarPage("Addresses");
+		
+		//Addresses => Reward points
+		rewardPointPage = (RewardPointPageObject) addressesPage.openDynamicSideBarPage("Reward points");
+	}
 	
 	@Test
-	public void User_02_Switch_Url() {
-		//Custormer page
+	public void User_03_Switch_Page_than_20_pages() {
+		rewardPointPage.openDynamicSideBarPageByName("Downloadable products"); 
+		downloadableProductPage = PageGeneratorManager.getDownloadableProductPage(driver);
 		
-		//Logout từ user
-		homePage = customerPage.clickToLogoutLink(driver);
+		downloadableProductPage.openDynamicSideBarPageByName("Customer info");
+		customerPage = PageGeneratorManager.getCustomerPage(driver);
 		
-		//từ trang user qua trang admin
-		homePage.openUrl(driver, adminUrl);
-		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
-		
-		//Login thành công vào admin
-		adminDashBoardPage = adminLoginPage.loginAsAdmin(GlobalConstants.DEV_ADMIN_USERNAME, GlobalConstants.DEV_ADMIN_PASSWORD);
-		Assert.assertTrue(adminDashBoardPage.isPageLoadedSuccess(driver));
-		
-		//Logout khỏi trang admin 
-		adminLoginPage = adminDashBoardPage.adminAbleToLogout(driver);
-		
-		//Qua trang user
-		adminLoginPage.openUrl(driver, userUrl);
-		homePage = PageGeneratorManager.getHomePage(driver);
-		
-		//Login vào user
-		loginPage = homePage.clickToLoginLink();
-		homePage = loginPage.loginAsUser(emailAddress, password);
+		customerPage.openDynamicSideBarPageByName("Reward points");
+		rewardPointPage = PageGeneratorManager.getRewardPointPage(driver);
 	}
 	
 
