@@ -76,7 +76,7 @@ public class BaseTest {
 			throw new RuntimeException("Browser name is not valid");
 		}
 		
-		driver.get("https://demo.nopcommerce.com/");
+		driver.get(url);
 		driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
