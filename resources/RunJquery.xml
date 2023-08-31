@@ -3,7 +3,7 @@
 <suite parallel="false" name="Data Table - Data Grid">
 <parameter name = "url" value = "https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"/>
 <test name="Run on Chrome">
-  	<parameter name = "browser" value = "Firefox"/>
+  	<parameter name = "browser" value = "Chrome"/>
  	<classes>
       <class name="com.jquery.table.Level_13_Handle_Data_Table"/>
     </classes>

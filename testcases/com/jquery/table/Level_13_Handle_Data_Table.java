@@ -71,8 +71,8 @@ public class Level_13_Handle_Data_Table extends BaseTest {
 		Assert.assertTrue(homePage.isRowValuesDisplayed("750", "Aruba", "756", "1504"));
 	}
 	
-	@Test
-	public void TC_04_Checkbox() {
+	//@Test
+	public void TC_04_Action_With_Icon_Button_Checkbox() {
 		homePage.clickToRowActionByCountryName("Afghanistan", "remove");
 		homePage.refreshCurrentPage(driver);
 		homePage.sleepInSecond(2);
@@ -82,9 +82,31 @@ public class Level_13_Handle_Data_Table extends BaseTest {
 		homePage.sleepInSecond(2);
 	}
 	
+	//@Test
+	public void TC_05_Get_All_Column_Values() {
+		homePage.getAllPageValuesByColumnName("Country");
+	}
+	
+	@Test
+	public void TC_06_Action_By_Index() {
+		homePage.openUrl(driver, "https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/");
+		
+		//Nhập vào textbox tại cột Contact Persion dòng thứ 2
+		homePage.enterToTextboxByColumnNameAndRowIndex("Contact Persion","2", "Oliver Kahl");
+		homePage.enterToTextboxByColumnNameAndRowIndex("Company","1", "Bayaer Munich");
+		
+		//Select dữ liệu tại cột Country dòng thứ 3
+		homePage.selectDropdownByColumnNameAndRowIndex("Country", "3", "United Kingdom");
+		
+		//Click vào checkbox  NPO dòng thứ 1 
+		homePage.clickToCheckboxByColumnNameAndRowIndex("NPO?","1");
+		homePage.clickToCheckboxByColumnNameAndRowIndex("NPO?","3");
+		homePage.clickToCheckboxByColumnNameAndRowIndex("NPO?","2");
+	}
+	
 	@AfterClass
 	public void afterClass() {
-		quitBrowserDriver();
+		//quitBrowserDriver();
 	}
 
 }
