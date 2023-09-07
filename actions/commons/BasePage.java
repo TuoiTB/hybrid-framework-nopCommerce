@@ -176,11 +176,11 @@ public class BasePage {
 	}
 	
 	public List<WebElement> getListElement(WebDriver driver, String locator) {
-		return driver.findElements(By.xpath(locator));
+		return driver.findElements(getByLocator(locator));
 	}
 	
 	public List<WebElement> getListElement(WebDriver driver, String locator, String...restParams) {
-		return driver.findElements(By.xpath(getDynamicLocator(locator, restParams)));
+		return driver.findElements(getByLocator(getDynamicLocator(locator, restParams)));
 	}
 	
 	public void clickToElement(WebDriver driver, String locator) {
