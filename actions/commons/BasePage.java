@@ -192,6 +192,11 @@ public class BasePage {
 		getElement(driver, getDynamicLocator(locator, restParams)).click();
 	}
 	
+	public void clickToElement(WebDriver driver, WebElement element) {
+		//driver.findElement(By.xpath(locator));
+		element.click();
+	}
+	
 	public void sendkeyToElement(WebDriver driver, String locator, String valueToSend) {
 		getElement(driver, locator).clear();
 		getElement(driver, locator).sendKeys(valueToSend);
@@ -459,6 +464,10 @@ public class BasePage {
 		new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicLocator(locator, restParams))));
 	}
 	
+	public void waitForElementClickable(WebDriver driver, WebElement element) {
+		new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
 	public void waitForElementInvisible(WebDriver driver, String locator) {
 		new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locator)));
 	}
@@ -509,6 +518,17 @@ public class BasePage {
 		waitForElementClickable(driver, AdminBasePageUI.LOGOUT_LINK);
 		clickToElement(driver,  AdminBasePageUI.LOGOUT_LINK);
 		return PageGeneratorManager.getAdminLoginPage(driver);
+	}
+	
+	//----------------------------------Upload multiple files
+	public void uploadMultipleFiles(WebDriver driver, String...fileNames) {
+		String filePath = System.getProperty("user.dir") + "\\uploadFiles\\";
+		String fullFileName = "";
+		for(String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		getElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
 	}
 	
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;

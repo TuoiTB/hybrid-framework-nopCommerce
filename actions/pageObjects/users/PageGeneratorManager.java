@@ -50,4 +50,6 @@ public class PageGeneratorManager {
 	public static AdminDashBoardPageObject getAdminDashBoardPage(WebDriver driver) {
 		return new AdminDashBoardPageObject(driver);
 	}
+	
+
 }

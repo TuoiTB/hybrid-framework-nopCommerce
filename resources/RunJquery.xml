@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite parallel="false" name="Data Table - Data Grid">
-<parameter name = "url" value = "https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"/>
+<parameter name = "url" value = "https://blueimp.github.io/jQuery-File-Upload/"/>
 <test name="Run on Chrome">
   	<parameter name = "browser" value = "Chrome"/>
  	<classes>
-      <class name="com.jquery.table.Level_13_Handle_Data_Table"/>
+      <class name="com.jquery.table.Level_14_Upload_Multiple_Files"/>
     </classes>
 </test>
   
+  
+<test name="Run on firefox">
+  	<parameter name = "browser" value = "Firefox"/>
+ 	<classes>
+      <class name="com.jquery.table.Level_14_Upload_Multiple_Files"/>
+    </classes>
+</test>
 </suite>
