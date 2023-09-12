@@ -3,6 +3,8 @@ package commons;
 import java.time.Duration;
 import java.util.Random;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,7 +19,13 @@ import org.testng.Reporter;
 public class BaseTest {
 	//Contains common function for all testcases
 	//private String projectPath = System.getProperty("user.dir");
+	
+	protected final Log log;
 	private WebDriver driver;
+	public BaseTest() {
+		log = LogFactory.getLog(getClass());
+}
+
 	protected WebDriver getBrowserDriver (String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		switch (browserList) {
@@ -103,7 +111,9 @@ public class BaseTest {
 		boolean pass = true;
 		try {
 			Assert.assertTrue(condition);
+			log.info("----------PASSED----------");
 		} catch (Throwable e) {
+			log.info("----------FAILED----------");
 			pass = false;
 
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
@@ -116,7 +126,9 @@ public class BaseTest {
 		boolean pass = true;
 		try {
 			Assert.assertFalse(condition);
+			log.info("----------PASSED----------");
 		} catch (Throwable e) {
+			log.info("----------FAILED----------");
 			pass = false;
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
@@ -128,7 +140,9 @@ public class BaseTest {
 		boolean pass = true;
 		try {
 			Assert.assertEquals(actual, expected);
+			log.info("----------PASSED----------");
 		} catch (Throwable e) {
+			log.info("----------FAILED----------");
 			pass = false;
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);

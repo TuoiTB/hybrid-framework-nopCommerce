@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite parallel="false" name="NopCommerce - UI Automation">
+<suite parallel="none" name="NopCommerce - UI Automation">
 <parameter name = "userUrl" value = "https://demo.nopcommerce.com/"/>
  <parameter name = "adminUrl" value = "https://admin-demo.nopcommerce.com"/> 
 
@@ -11,8 +11,7 @@
 <test name="Run on Chrome">
   	<parameter name = "browser" value = "Chrome"/>
  	<classes>
-      <class name="com.nopcommerce.user.Level_15_Assert_Verify"/>
+      <class name="com.nopcommerce.user.Level_16_Log"/>
     </classes>
 </test>
-  
 </suite>
