@@ -17,10 +17,7 @@
 	<classpathentry kind="lib" path="libAssertJ/assertj-core-3.24.2.jar"/>
 	<classpathentry kind="lib" path="libAssertJ/byte-buddy-1.12.21.jar"/>
 	<classpathentry kind="lib" path="libSelenium/selenium-server-4.11.0.jar"/>
-	<classpathentry kind="lib" path="libLog4Jver1/commons-codec-1.11.jar"/>
-	<classpathentry kind="lib" path="libLog4Jver1/commons-io-2.6.jar"/>
-	<classpathentry kind="lib" path="libLog4Jver1/commons-lang3-3.8.1.jar"/>
-	<classpathentry kind="lib" path="libLog4Jver1/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="libLog4Jver1/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="libLog4Jver2/log4j-api-2.19.0.jar"/>
+	<classpathentry kind="lib" path="libLog4Jver2/log4j-core-2.19.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
