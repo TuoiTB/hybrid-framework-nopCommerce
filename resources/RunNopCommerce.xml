@@ -6,12 +6,13 @@
 
 <listeners>
       <listener class-name="commons.MethodListener"/>
+      <listener class-name="reportConfig.ExtentTestListener"/>
 </listeners>
 
-<test name="Run on Chrome">
-  	<parameter name = "browser" value = "Chrome"/>
+<test name="Run on Firefox">
+  	<parameter name = "browser" value = "Firefox"/>
  	<classes>
-      <class name="com.nopcommerce.user.Level_16_Log"/>
+      <class name="com.nopcommerce.user.Level_18_Extent_Report_V5"/>
     </classes>
 </test>
 </suite>

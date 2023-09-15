@@ -22,10 +22,13 @@ public class BaseTest {
 	
 	protected final Logger log;
 	private WebDriver driver;
-	public BaseTest() {
+	protected BaseTest() {
 		log = LogManager.getLogger(getClass());
 }
 
+	public WebDriver getDriver() {
+		return driver;
+	}
 	protected WebDriver getBrowserDriver (String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		switch (browserList) {
