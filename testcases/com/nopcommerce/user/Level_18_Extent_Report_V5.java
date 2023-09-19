@@ -1,4 +1,4 @@
-package com.nopcommerce.user;
+/**package com.nopcommerce.user;
 
 import java.lang.reflect.Method;
 
@@ -124,3 +124,4 @@ public class Level_18_Extent_Report_V5 extends BaseTest {
 	}
 
 }
+*/

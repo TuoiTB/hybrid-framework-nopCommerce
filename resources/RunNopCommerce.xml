@@ -6,13 +6,13 @@
 
 <listeners>
       <listener class-name="commons.MethodListener"/>
-      <listener class-name="reportConfig.ExtentTestListener"/>
+      <listener class-name="reportConfig.AllureTestListener"/>
 </listeners>
 
 <test name="Run on Firefox">
   	<parameter name = "browser" value = "Firefox"/>
  	<classes>
-      <class name="com.nopcommerce.user.Level_18_Extent_Report_V5"/>
+      <class name="com.nopcommerce.user.Level_19_Allure_Report"/>
     </classes>
 </test>
 </suite>

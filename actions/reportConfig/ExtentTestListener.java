@@ -1,4 +1,4 @@
-package reportConfig;
+/**package reportConfig;
 
 import static reportConfig.ExtentTestManager.getTest;
 
@@ -57,3 +57,4 @@ public class ExtentTestListener extends BaseTest implements ITestListener {
 		getTest().log(Status.FAIL, MarkupHelper.createLabel(iTestResult.getName() + " - Failed with Percentage", ExtentColor.RED));
 	}
 }
+*/

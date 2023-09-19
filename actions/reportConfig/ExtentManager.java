@@ -1,3 +1,4 @@
+/**
 package reportConfig;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -25,3 +26,4 @@ public class ExtentManager {
 		return extentReports;
 	}
 }
+*/
