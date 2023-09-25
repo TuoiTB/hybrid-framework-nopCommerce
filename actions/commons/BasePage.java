@@ -27,10 +27,6 @@ import pageObjects.users.RewardPointPageObject;
 import pageUI.admin.AdminBasePageUI;
 import pageUI.users.AddressesPageUI;
 import pageUI.users.BasePageUI;
-import pageUI.users.CustomerPageUI;
-import pageUI.users.DownloadableProductPageUI;
-import pageUI.users.RewardPointPageUI;
-import pageUI.users.SideBarMyAccountPageUI;
 
 public class BasePage {
 	public static BasePage getBasePage() {
@@ -305,6 +301,26 @@ public class BasePage {
 		return getElement(driver, getDynamicLocator(locator, restParams)).isDisplayed();
 	}
 	
+	public void setImplicitWait(WebDriver driver, long timeout) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+	}
+	
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+		setImplicitWait(driver, shortTimeout);
+		List<WebElement> elements = getListElement(driver, locator);
+		setImplicitWait(driver, longTimeout);
+		if (elements.size() > 0 && elements.get(0).isDisplayed()) {
+			//Element co tren UI va co trong DOM 
+			return false;
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			//element k co tren UI va co trong DOM
+			return true;
+		} else {
+			//Element khong co tren UI va khong co trong DOM
+			return true;
+		}
+	}
+	
 	public boolean isElementSelected(WebDriver driver, String locator) {
 		return getElement(driver, locator).isSelected();
 	}
@@ -532,4 +548,5 @@ public class BasePage {
 	}
 	
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
+	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 }

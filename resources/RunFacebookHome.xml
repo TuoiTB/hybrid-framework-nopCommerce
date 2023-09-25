@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite parallel="none" name="NopCommerce - UI Automation">
-<parameter name = "userUrl" value = "https://demo.nopcommerce.com/"/>
- <parameter name = "adminUrl" value = "https://admin-demo.nopcommerce.com"/> 
+<suite parallel="none" name="Facebook - UI Automation">
+<parameter name = "url" value = "https://www.facebook.com/"/>
 
 <listeners>
       <listener class-name="commons.MethodListener"/>
@@ -12,7 +11,7 @@
 <test name="Run on Chrome">
   	<parameter name = "browser" value = "chrome"/>
  	<classes>
-      <class name="com.nopcommerce.user.Level_19_Allure_Report"/>
+      <class name="com.facebook.home.Level_20_Element_Undisplayed"/>
     </classes>
 </test>
 </suite>

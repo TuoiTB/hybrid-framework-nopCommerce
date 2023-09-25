@@ -47,7 +47,7 @@ public class Level_19_Allure_Report extends BaseTest {
 	@Description("User_01_Validate register form")
 	@Story("Register")
 	@Test
-	public void User_01_Register_Validate() {
+	public void User_01_Validate_Register() {
 		
 		
 		Assert.assertTrue(homePage.isRegisterLinkDisplayed());
