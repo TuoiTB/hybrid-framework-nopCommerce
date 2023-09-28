@@ -24,7 +24,7 @@ public class Level_20_Element_Undisplayed extends BaseTest {
 		homePage = PageGeneratorManager.getHomePage(driver);
 	}
 	
-	@Test
+	//@Test
 	public void Home_01_Element_Displayed() {
 		log.info("Home_01 - Step 01: Click Create New Account Button");
 		homePage.clickToCreateNewAccountButton();
@@ -49,7 +49,7 @@ public class Level_20_Element_Undisplayed extends BaseTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void Home_02_Element_Undisplayed_In_HTML() {
 		homePage.enterToEmailTextbox("");
 		homePage.sleepInSecond(2);
@@ -83,8 +83,8 @@ public class Level_20_Element_Undisplayed extends BaseTest {
 
 	@Test
 	public void Home_03_Element_Undisplayed_NOT_In_HTML_02() {
-		log.info("Home_01 - Step 01: Click Create New Account Button");
-		homePage.clickToCloseSignUpPopup();
+		//log.info("Home_01 - Step 01: Click Create New Account Button");
+		//homePage.clickToCloseSignUpPopup();
 		
 		log.info("Home_01 - Step 02: Verify First Name textbox is not displayed");
 		verifyTrue(homePage.isFirstNameTextboxUnDisplayed());

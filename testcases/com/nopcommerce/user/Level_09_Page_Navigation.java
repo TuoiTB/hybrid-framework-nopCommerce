@@ -22,7 +22,6 @@ import pageObjects.users.RewardPointPageObject;
 public class Level_09_Page_Navigation extends BaseTest {
 
 	private WebDriver driver;
-	private String projectPath = System.getProperty("user.dir");
 	
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;

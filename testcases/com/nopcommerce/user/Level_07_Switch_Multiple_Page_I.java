@@ -22,8 +22,6 @@ import pageObjects.users.RewardPointPageObject;
 public class Level_07_Switch_Multiple_Page_I extends BaseTest {
 
 	private WebDriver driver;
-	private String projectPath = System.getProperty("user.dir");
-	
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;

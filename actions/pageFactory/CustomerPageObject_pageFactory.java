@@ -6,8 +6,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import pageUI.users.CustomerPageUI;
-
 public class CustomerPageObject_pageFactory extends BasePageFactory{
 
 	WebDriver driver;

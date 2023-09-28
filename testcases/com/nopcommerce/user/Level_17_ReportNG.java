@@ -1,7 +1,6 @@
 package com.nopcommerce.user;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -9,16 +8,9 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
-import pageObjects.admin.AdminDashBoardPageObject;
-import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.users.AddressesPageObject;
-import pageObjects.users.CustomerPageObject;
-import pageObjects.users.DownloadableProductPageObject;
 import pageObjects.users.HomePageObject;
-import pageObjects.users.LoginPageObject;
 import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RegisterPageObject;
-import pageObjects.users.RewardPointPageObject;
 
 public class Level_17_ReportNG extends BaseTest {
 	//ReportNG đã lỗi thời nên không dùng tới, nếu cần thì xem lại video topic 71

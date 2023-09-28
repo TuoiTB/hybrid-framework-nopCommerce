@@ -1,17 +1,16 @@
 package pageObjects.users;
 
-import java.util.Random;
-
 import org.openqa.selenium.WebDriver;
 
-import commons.BasePage;
+import commons.BaseElement;
 import io.qameta.allure.Step;
 import pageUI.users.RegisterPageUI;
 
-public class RegisterPageObject extends BasePage {
+public class RegisterPageObject extends BaseElement {
 	private WebDriver driver;
 	
 	public RegisterPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
@@ -52,11 +51,7 @@ public class RegisterPageObject extends BasePage {
 		return getElementText(driver, RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
 	}
 
-	public HomePageObject clickToHomePageLogo() {
-		waitForElementClickable(driver, RegisterPageUI.HOMEPAGE_LOGO_IMAGE);
-		clickToElement(driver, RegisterPageUI.HOMEPAGE_LOGO_IMAGE);
-		return PageGeneratorManager.getHomePage(driver);
-	}
+	
 
 	@Step("Enter to First Name textbox with value is {0}")
 	public void enterToFirstNameTextbox(String firstname) {

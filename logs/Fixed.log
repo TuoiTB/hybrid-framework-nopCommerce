@@ -1,24 +1,14 @@
-[25-09-2023 15:22:25.549 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 01: Click Create New Account Button
-[25-09-2023 15:22:25.795 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 02: Verify First Name textbox is displayed
-[25-09-2023 15:22:26.635 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------PASSED----------
-[25-09-2023 15:22:26.635 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 03: Verify Sur Name textbox is displayed
-[25-09-2023 15:22:26.699 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------PASSED----------
-[25-09-2023 15:22:26.699 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 04: Verify Email textbox is displayed
-[25-09-2023 15:22:26.780 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------PASSED----------
-[25-09-2023 15:22:26.781 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 05: Verify Password textbox is displayed
-[25-09-2023 15:22:26.845 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------PASSED----------
-[25-09-2023 15:22:26.845 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 06: Enter to Email textbox
-[25-09-2023 15:22:27.107 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 07: Verify Confirm Email textbox is displayed
-[25-09-2023 15:22:27.195 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------PASSED----------
-[25-09-2023 15:22:29.513 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_02 - Step 02: Verify Confirm Email textbox is not displayed
-[25-09-2023 15:22:59.889 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 01: Click Create New Account Button
-[25-09-2023 15:22:59.968 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 02: Verify First Name textbox is not displayed
-[25-09-2023 15:23:00.000 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------FAILED----------
-[25-09-2023 15:23:00.000 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 03: Verify Sur Name textbox is not displayed
-[25-09-2023 15:23:00.030 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------FAILED----------
-[25-09-2023 15:23:00.030 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 04: Verify Email textbox is not displayed
-[25-09-2023 15:23:00.061 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------FAILED----------
-[25-09-2023 15:23:00.061 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 05: Verify Password textbox is not displayed
-[25-09-2023 15:23:00.093 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------FAILED----------
-[25-09-2023 15:23:00.094 INFO com.facebook.home.Level_20_Element_Undisplayed] - Home_01 - Step 07: Verify Confirm Email textbox is not displayed
-[25-09-2023 15:23:00.123 INFO com.facebook.home.Level_20_Element_Undisplayed] - ----------FAILED----------
+[28-09-2023 19:38:28.790 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 01: Click to Log Register link
+[28-09-2023 19:38:29.899 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 02: Enter to First Name textbox
+[28-09-2023 19:38:30.056 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 03: Enter to Last Name textbox
+[28-09-2023 19:38:30.200 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 04: Enter to Email textbox
+[28-09-2023 19:38:30.350 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 05: Enter to Password textbox
+[28-09-2023 19:38:30.471 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 06: Enter to Confirm Password textbox
+[28-09-2023 19:38:30.601 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 07: Click to Register button
+[28-09-2023 19:38:31.413 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 08: Verify success message is displayed
+[28-09-2023 19:38:31.475 INFO com.nopcommerce.user.Level_21_Pattern_Object] - ----------PASSED----------
+[28-09-2023 19:38:31.476 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 09: Click to Log in link
+[28-09-2023 19:38:31.938 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 10: Enter to Email textbox
+[28-09-2023 19:38:32.074 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 11: Enter to Password textbox
+[28-09-2023 19:38:32.201 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 12: Click to Login button
+[28-09-2023 19:38:32.985 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 13: Click to Logout link

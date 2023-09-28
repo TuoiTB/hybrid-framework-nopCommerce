@@ -26,7 +26,7 @@ import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RewardPointPageObject;
 import pageUI.admin.AdminBasePageUI;
 import pageUI.users.AddressesPageUI;
-import pageUI.users.BasePageUI;
+import pageUI.users.BaseElementUI;
 
 public class BasePage {
 	public static BasePage getBasePage() {
@@ -499,25 +499,25 @@ public class BasePage {
 	}
 
 	public DownloadableProductPageObject openDownloadableProductPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.DOWNLOADABLE_PRODUCT_PAGE_LINK);
-		clickToElement(driver, BasePageUI.DOWNLOADABLE_PRODUCT_PAGE_LINK);
+		waitForElementClickable(driver, BaseElementUI.DOWNLOADABLE_PRODUCT_PAGE_LINK);
+		clickToElement(driver, BaseElementUI.DOWNLOADABLE_PRODUCT_PAGE_LINK);
 		return PageGeneratorManager.getDownloadableProductPage(driver);
 	}
 	
 	public AddressesPageObject openAddressesPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.ADDRESSES_PAGE_LINK);
-		clickToElement(driver, BasePageUI.ADDRESSES_PAGE_LINK);
+		waitForElementClickable(driver, BaseElementUI.ADDRESSES_PAGE_LINK);
+		clickToElement(driver, BaseElementUI.ADDRESSES_PAGE_LINK);
 		return PageGeneratorManager.getAddressesPage(driver);
 	}
 	public CustomerPageObject openCustomerPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.CUSTOMER_INFOR_PAGE_LINK);
-		clickToElement(driver, BasePageUI.CUSTOMER_INFOR_PAGE_LINK);
+		waitForElementClickable(driver, BaseElementUI.CUSTOMER_INFOR_PAGE_LINK);
+		clickToElement(driver, BaseElementUI.CUSTOMER_INFOR_PAGE_LINK);
 		return PageGeneratorManager.getCustomerPage(driver);
 	}
 	//---------
 	public HomePageObject clickToLogoutLink(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
-		clickToElement(driver, BasePageUI.LOGOUT_LINK);
+		waitForElementClickable(driver, BaseElementUI.LOGOUT_LINK);
+		clickToElement(driver, BaseElementUI.LOGOUT_LINK);
 		return PageGeneratorManager.getHomePage(driver);
 		
 	}
@@ -525,8 +525,8 @@ public class BasePage {
 	
 	//--------------------------------------------------
 	public HomePageObject userAbleToLogout(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
-		clickToElement(driver, BasePageUI.LOGOUT_LINK);
+		waitForElementClickable(driver, BaseElementUI.LOGOUT_LINK);
+		clickToElement(driver, BaseElementUI.LOGOUT_LINK);
 		return PageGeneratorManager.getHomePage(driver);
 	}
 	
@@ -544,7 +544,7 @@ public class BasePage {
 			fullFileName = fullFileName + filePath + file + "\n";
 		}
 		fullFileName = fullFileName.trim();
-		getElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
+		getElement(driver, BaseElementUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
 	}
 	
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;

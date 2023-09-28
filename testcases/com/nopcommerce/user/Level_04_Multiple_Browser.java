@@ -18,7 +18,6 @@ import pageObjects.users.RegisterPageObject;
 public class Level_04_Multiple_Browser extends BaseTest {
 
 	private WebDriver driver;
-	private String projectPath = System.getProperty("user.dir");
 	
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;

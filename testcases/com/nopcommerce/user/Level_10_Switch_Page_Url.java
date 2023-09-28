@@ -12,19 +12,15 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import pageObjects.admin.AdminDashBoardPageObject;
 import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.users.AddressesPageObject;
 import pageObjects.users.CustomerPageObject;
-import pageObjects.users.DownloadableProductPageObject;
 import pageObjects.users.HomePageObject;
 import pageObjects.users.LoginPageObject;
 import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RegisterPageObject;
-import pageObjects.users.RewardPointPageObject;
 
 public class Level_10_Switch_Page_Url extends BaseTest {
 
 	private WebDriver driver;
-	private String projectPath = System.getProperty("user.dir");
 	
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
@@ -32,9 +28,6 @@ public class Level_10_Switch_Page_Url extends BaseTest {
 	
 	
 	private CustomerPageObject customerPage;
-	private DownloadableProductPageObject downloadableProductPage;
-	private AddressesPageObject addressesPage;
-	private RewardPointPageObject rewardPointPage;
 	private AdminLoginPageObject adminLoginPage;
 	private AdminDashBoardPageObject adminDashBoardPage;
 	

@@ -8,8 +8,7 @@ public class AdminDashBoardPageObject extends BasePage {
 
 	private WebDriver driver;
 
-	public AdminDashBoardPageObject(WebDriver driver2) {
-		super();
+	public AdminDashBoardPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
 	

@@ -5,10 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import pageUI.users.HomePageUI;
-import pageUI.users.RegisterPageUI;
 
 public class HomePageObject_pageFactory extends BasePageFactory{
 	//Contains actions as functions of that page. Ex: Click/ Select/ Verify/ getText/... 

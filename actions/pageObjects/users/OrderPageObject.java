@@ -2,7 +2,6 @@ package pageObjects.users;
 
 import org.openqa.selenium.WebDriver;
 
-import commons.BasePage;
 import pageUI.users.AddressesPageUI;
 
 public class OrderPageObject extends SideBarMyAccountPageObject{

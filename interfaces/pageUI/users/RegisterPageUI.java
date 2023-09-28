@@ -17,5 +17,4 @@ public class RegisterPageUI {
 	public static final String PASSWORD_TEXTBOX = "id=Password";
 	public static final String CONFIRM_PASSWORD_TEXTBOX = "ID=ConfirmPassword";
 	
-	public static final String HOMEPAGE_LOGO_IMAGE = "class=header-logo";
-}
+	}

@@ -1,6 +1,5 @@
 package pageObjects.users;
 
-import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -9,8 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import commons.BasePage;
 import pageUI.jquery.UploadPageUI;
-import pageUI.users.HomePageUI;
-import pageUI.users.RegisterPageUI;
 
 public class UploadPageObject extends BasePage{
 	//Contains actions as functions of that page. Ex: Click/ Select/ Verify/ getText/... 

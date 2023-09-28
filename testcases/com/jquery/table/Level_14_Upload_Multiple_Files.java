@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import graphql.Assert;
-import pageObjects.jquery.HomePageObject;
 import pageObjects.jquery.PageGeneratorManager;
 import pageObjects.users.UploadPageObject;
 

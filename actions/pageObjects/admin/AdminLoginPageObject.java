@@ -3,10 +3,8 @@ package pageObjects.admin;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageObjects.users.HomePageObject;
 import pageObjects.users.PageGeneratorManager;
 import pageUI.admin.AdminLoginPageUI;
-import pageUI.users.LoginPageUI;
 
 public class AdminLoginPageObject extends BasePage{
 	WebDriver driver;

@@ -3,18 +3,17 @@ package pageObjects.users;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import commons.BasePage;
+import commons.BaseElement;
 import io.qameta.allure.Step;
 import pageUI.users.HomePageUI;
-import pageUI.users.RegisterPageUI;
 
-public class HomePageObject extends BasePage{
+public class HomePageObject extends BaseElement{
 	//Contains actions as functions of that page. Ex: Click/ Select/ Verify/ getText/... 
 	private WebDriver driver;
 	WebDriverWait explicitWait;
 	
 	public HomePageObject(WebDriver driver) {
-		super();
+		super(driver);
 		this.driver = driver;
 	}
 	
@@ -45,6 +44,9 @@ public class HomePageObject extends BasePage{
 		waitForElementVisible(driver, HomePageUI.REGISTER_LINK);
 		return isElementDisplayed(driver, HomePageUI.REGISTER_LINK);
 	}
+
+
+	
 
 	
 }

@@ -1,4 +1,4 @@
-package reportConfig;
+/*package reportConfig;
 
 import java.io.File;
 import java.util.Calendar;
@@ -12,7 +12,7 @@ import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.xml.XmlSuite;
+import org.testng.xml.XmlSuite;*/
 //import com.relevantcodes.extentreports.ExtentReports;
 //import com.relevantcodes.extentreports.ExtentTest;
 //import com.relevantcodes.extentreports.LogStatus;

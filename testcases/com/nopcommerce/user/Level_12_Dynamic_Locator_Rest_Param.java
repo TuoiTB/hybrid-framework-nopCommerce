@@ -9,8 +9,6 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
-import pageObjects.admin.AdminDashBoardPageObject;
-import pageObjects.admin.AdminLoginPageObject;
 import pageObjects.users.AddressesPageObject;
 import pageObjects.users.CustomerPageObject;
 import pageObjects.users.DownloadableProductPageObject;
@@ -23,7 +21,6 @@ import pageObjects.users.RewardPointPageObject;
 public class Level_12_Dynamic_Locator_Rest_Param extends BaseTest {
 
 	private WebDriver driver;
-	private String projectPath = System.getProperty("user.dir");
 	
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
@@ -34,15 +31,12 @@ public class Level_12_Dynamic_Locator_Rest_Param extends BaseTest {
 	private DownloadableProductPageObject downloadableProductPage;
 	private AddressesPageObject addressesPage;
 	private RewardPointPageObject rewardPointPage;
-	private AdminLoginPageObject adminLoginPage;
-	private AdminDashBoardPageObject adminDashBoardPage;
 	
 	private String firstName = "John";
 	private String lastName = "Wick";
 	private String password = "auto@123";
 	private String emailAddress = getEmailRandom();
 	
-	private String adminUrl = GlobalConstants.DEV_ADMIN_URL;
 	private String userUrl = GlobalConstants.DEV_USER_URL;
 	
 	@Parameters("browser")

@@ -1,9 +1,6 @@
 package pageObjects.facebook;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import commons.BasePage;
 import pageUI.facebook.HomePageUI;

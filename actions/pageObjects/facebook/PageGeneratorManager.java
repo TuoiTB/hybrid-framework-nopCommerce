@@ -2,9 +2,6 @@ package pageObjects.facebook;
 
 import org.openqa.selenium.WebDriver;
 
-import pageObjects.admin.AdminDashBoardPageObject;
-import pageObjects.admin.AdminLoginPageObject;
-
 public class PageGeneratorManager {
 
 
