@@ -9,10 +9,13 @@
       <listener class-name="reportConfig.AllureTestListener"/>
 </listeners>
 
-<test name="Run on Chrome">
+<test name="Run on Chrome" preserve-order="true">
   	<parameter name = "browser" value = "chrome"/>
  	<classes>
-      <class name="com.nopcommerce.user.Level_21_Pattern_Object"/>
+      <class name="com.nopcommerce.cookie.Common_Register"/>
+      <class name="com.nopcommerce.cookie.Order"/>
+      <class name="com.nopcommerce.cookie.Product_Detail"/>
+      <class name="com.nopcommerce.cookie.Payment"/>
     </classes>
 </test>
 </suite>
