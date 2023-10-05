@@ -11,11 +11,17 @@
 
 <test name="Run on Chrome" preserve-order="true">
   	<parameter name = "browser" value = "chrome"/>
+ 	<!-- Run with Share/ Cookie
  	<classes>
       <class name="com.nopcommerce.cookie.Common_Register"/>
       <class name="com.nopcommerce.cookie.Order"/>
       <class name="com.nopcommerce.cookie.Product_Detail"/>
       <class name="com.nopcommerce.cookie.Payment"/>
     </classes>
+    -->
+    <classes>
+    <class name="com.nopcommerce.user.Level_22_Close_Browser"/>
+    </classes>
+    
 </test>
 </suite>
