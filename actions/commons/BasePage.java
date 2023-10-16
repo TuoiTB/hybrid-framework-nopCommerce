@@ -25,6 +25,7 @@ import pageObjects.users.DownloadableProductPageObject;
 import pageObjects.users.HomePageObject;
 import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RewardPointPageObject;
+import pageObjects.wordpress.UserHomePageObject;
 import pageUI.admin.AdminBasePageUI;
 import pageUI.users.AddressesPageUI;
 import pageUI.users.BaseElementUI;
@@ -536,6 +537,11 @@ public class BasePage {
 		clickToElement(driver, BaseElementUI.LOGOUT_LINK);
 		return PageGeneratorManager.getHomePage(driver);
 		
+	}
+	//----------WordPress
+	public UserHomePageObject wordPressOpenUserHomePage(WebDriver driver, String userUrl) {
+		openUrl(driver, userUrl);
+		return pageObjects.wordpress.PageGeneratorManager.getUserHomePage(driver);
 	}
 	
 	

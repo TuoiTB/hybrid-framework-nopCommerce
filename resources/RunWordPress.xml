@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="Word Press">
+<parameter name = "userUrl" value = "http://localhost"/>
+<parameter name = "adminUrl" value = "http://localhost/wp-admin"/> 
+
+<listeners>
+      <listener class-name="commons.MethodListener"/>
+      <listener class-name="reportConfig.AllureTestListener"/>
+</listeners>
+
+<test name="Run on Chrome" preserve-order="true">
+  	<parameter name = "browser" value = "chrome"/>
+ 	<!-- Run with Share/ Cookie
+ 	<classes>
+      <class name="com.nopcommerce.cookie.Common_Register"/>
+      <class name="com.nopcommerce.cookie.Order"/>
+      <class name="com.nopcommerce.cookie.Product_Detail"/>
+      <class name="com.nopcommerce.cookie.Payment"/>
+    </classes>
+    -->
+    <classes>
+    <class name="com.wordpress.admin.Admin_01_Post"/>
+    </classes>
+    
+</test>
+</suite>

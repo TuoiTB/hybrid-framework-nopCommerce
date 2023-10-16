@@ -105,6 +105,11 @@ public class BaseTest {
 		Random rand = new Random();
 		return "automation" + rand.nextInt(9999) + "@gmail.com";
 	}
+	
+	protected int getNumberRandom() {
+		Random rand = new Random();
+		return rand.nextInt(9999);
+		}
 
 	protected void quitBrowserDriver() {
 		String cmd = null;
