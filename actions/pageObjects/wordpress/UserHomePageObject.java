@@ -34,6 +34,27 @@ public class UserHomePageObject extends BasePage {
 		return PageGeneratorManager.getUserPostPage(driver);
 	}
 
+	public boolean isPostTitleNotDisplayed(String postTitleEdit) {
+		return isElementUndisplayed(driver, UserHomePageUI.POST_TITLE_TEXT, postTitleEdit);
+	}
+
+	public void enterToSearchTextboxAtHomePage(String postTitleEdit) {
+		waitForElementVisible(driver, UserHomePageUI.SEARCH_TEXTBOX);
+		sendkeyToElement(driver, UserHomePageUI.SEARCH_TEXTBOX, postTitleEdit);
+		
+	}
+
+	public void clickToSearchButtonAtHomePage() {
+		waitForElementClickable(driver, UserHomePageUI.SEARCH_POSTS_BUTTON);
+		clickToElement(driver, UserHomePageUI.SEARCH_POSTS_BUTTON);
+	}
+
+	public boolean IsNoPostFoundMessageDisplayedatSearchDetail() {
+		waitForElementVisible(driver, UserHomePageUI.NO_POSTS_MESSAGE_AT_SEARCH_DETAIL);
+		return isElementDisplayed(driver, UserHomePageUI.NO_POSTS_MESSAGE_AT_SEARCH_DETAIL);
+		
+	}
+
 	
 
 

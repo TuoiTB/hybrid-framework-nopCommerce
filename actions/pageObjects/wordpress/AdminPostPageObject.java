@@ -26,21 +26,17 @@ public class AdminPostPageObject extends AdminMenuItemPageObject {
 	public void enterToPostBody(String postContent) {
 		//Switch to Iframe
 		switchToFrame(driver, AdminPostPageUI.POST_CONTENT_IFRAME);
-		sleepInSecond(2);
 		
 		//click to content texbox
 		waitForElementClickable(driver, AdminPostPageUI.POST_CONTENT_TEXBOX);
 		clickToElement(driver, AdminPostPageUI.POST_CONTENT_TEXBOX);
-		sleepInSecond(2);
 		
 		//enter to content textbox
 		waitForElementVisible(driver, AdminPostPageUI.POST_CONTENT_TEXBOX);
 		sendkeyToElement(driver, AdminPostPageUI.POST_CONTENT_TEXBOX, postContent);
-		sleepInSecond(2);
 		
 		//switch to  default content
 		switchToDefaultContent(driver);
-		sleepInSecond(2);
 	}
 
 	public void selectCategoryCheckbox(String catagoryName) {
@@ -55,16 +51,15 @@ public class AdminPostPageObject extends AdminMenuItemPageObject {
 		clickToElement(driver, AdminPostPageUI.POST_TAG_ADD_BUTTON);
 	}
 	
-	public void clickToPublishButton() {
-		scrollToElementOnTop(driver, AdminPostPageUI.POST_PUBLISH_BUTTON);
-		waitForElementClickable(driver, AdminPostPageUI.POST_PUBLISH_BUTTON);
-		clickToElement(driver, AdminPostPageUI.POST_PUBLISH_BUTTON);
+	public void clickToPublishAndEditButton() {
+		scrollToElementOnTop(driver, AdminPostPageUI.POST_PUBLISH_AND_EDIT_BUTTON);
+		waitForElementClickable(driver, AdminPostPageUI.POST_PUBLISH_AND_EDIT_BUTTON);
+		clickToElement(driver, AdminPostPageUI.POST_PUBLISH_AND_EDIT_BUTTON);
 	}
 	
-	public boolean IsPostPublishedMessageDisplayed(String mesage) {
-		waitForElementVisible(driver, AdminPostPageUI.POST_MESSAGE, mesage);
-		return isElementDisplayed(driver, AdminPostPageUI.POST_MESSAGE, mesage);
-	
+	public boolean IsPostMessageDisplayed(String message) {
+		waitForElementVisible(driver, AdminPostPageUI.POST_MESSAGE, message);
+		return isElementDisplayed(driver, AdminPostPageUI.POST_MESSAGE, message);
 	}
 
 	public void enterToSearchTextbox(String postTitle) {
@@ -86,10 +81,29 @@ public class AdminPostPageObject extends AdminMenuItemPageObject {
 		waitForElementVisible(driver, AdminPostPageUI.POST_INFOR_BY_COLUMN_NAME, columnName, columnValue);
 		return isElementDisplayed(driver, AdminPostPageUI.POST_INFOR_BY_COLUMN_NAME, columnName, columnValue);
 	}
-	
 
+	public void clickToRowActionLinkByPostTitle(String postTitle, String rowAction) {
+		waitForElementClickable(driver, AdminPostPageUI.POST_TITLE_IN_ROW, postTitle);
+		hoverToElement(driver, AdminPostPageUI.POST_TITLE_IN_ROW, postTitle);
+		
+		waitForElementClickable(driver, AdminPostPageUI.ROW_ACTION_LINK_BY_POST_TITLE, postTitle, rowAction);
+		clickToElement(driver, AdminPostPageUI.ROW_ACTION_LINK_BY_POST_TITLE, postTitle, rowAction);
+		
+	}
 
+	public void unCheckToOldCategory(String catagoryName) {
+		waitForElementClickable(driver, AdminPostPageUI.POST_CATEGORIES_CHECKBOX, catagoryName);
+		uncheckToCheckbox(driver, AdminPostPageUI.POST_CATEGORIES_CHECKBOX, catagoryName);
+	}
+
+	public void removeOldTag(String postTagName) {
+		waitForElementClickable(driver, AdminPostPageUI.POST_REMOVE_TAG_ICON);
+		clickToElement(driver, AdminPostPageUI.POST_REMOVE_TAG_ICON);
+	}
 	
-	
-	
+	public boolean IsNoPostFoundMessageDisplayed() {
+		waitForElementVisible(driver, AdminPostPageUI.NO_POSTS_MESSAGE);
+		return isElementDisplayed(driver, AdminPostPageUI.NO_POSTS_MESSAGE);
+	}
+
 }

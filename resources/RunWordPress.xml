@@ -9,7 +9,7 @@
       <listener class-name="reportConfig.AllureTestListener"/>
 </listeners>
 
-<test name="Run on Chrome" preserve-order="true">
+<test name="Run on chrome" preserve-order="true">
   	<parameter name = "browser" value = "chrome"/>
  	<!-- Run with Share/ Cookie
  	<classes>

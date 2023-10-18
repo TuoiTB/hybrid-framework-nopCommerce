@@ -25,6 +25,7 @@ import pageObjects.users.DownloadableProductPageObject;
 import pageObjects.users.HomePageObject;
 import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RewardPointPageObject;
+import pageObjects.wordpress.AdminDashBoardPageObject;
 import pageObjects.wordpress.UserHomePageObject;
 import pageUI.admin.AdminBasePageUI;
 import pageUI.users.AddressesPageUI;
@@ -310,6 +311,12 @@ public class BasePage {
 		}
 	}
 	
+	public void uncheckToCheckbox(WebDriver driver, String locator, String...restParams) {
+		if (isElementSelected(driver, getDynamicLocator(locator, restParams))) {
+			clickToElement(driver, getDynamicLocator(locator, restParams));
+		}
+	}
+	
 	public boolean isElementDisplayed(WebDriver driver, String locator) {
 		return getElement(driver, locator).isDisplayed();
 	}
@@ -325,6 +332,22 @@ public class BasePage {
 	public boolean isElementUndisplayed(WebDriver driver, String locator) {
 		setImplicitWait(driver, shortTimeout);
 		List<WebElement> elements = getListElement(driver, locator);
+		setImplicitWait(driver, longTimeout);
+		if (elements.size() > 0 && elements.get(0).isDisplayed()) {
+			//Element co tren UI va co trong DOM 
+			return false;
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			//element k co tren UI va co trong DOM
+			return true;
+		} else {
+			//Element khong co tren UI va khong co trong DOM
+			return true;
+		}
+	}
+	
+	public boolean isElementUndisplayed(WebDriver driver, String locator, String...restParams) {
+		setImplicitWait(driver, shortTimeout);
+		List<WebElement> elements = getListElement(driver, getDynamicLocator(locator, restParams));
 		setImplicitWait(driver, longTimeout);
 		if (elements.size() > 0 && elements.get(0).isDisplayed()) {
 			//Element co tren UI va co trong DOM 
@@ -357,6 +380,11 @@ public class BasePage {
 	
 	public void hoverToElement(WebDriver driver, String locator) {
 		new Actions(driver).moveToElement(getElement(driver, locator)).perform();
+	
+	}
+	
+	public void hoverToElement(WebDriver driver, String locator, String...restParams) {
+		new Actions(driver).moveToElement(getElement(driver, getDynamicLocator(locator, restParams))).perform();
 	
 	}
 	
@@ -544,6 +572,10 @@ public class BasePage {
 		return pageObjects.wordpress.PageGeneratorManager.getUserHomePage(driver);
 	}
 	
+	public AdminDashBoardPageObject wordPressOpenAdminDashBoardPage(WebDriver driver, String adminUrl) {
+		openUrl(driver, adminUrl);
+		return pageObjects.wordpress.PageGeneratorManager.getAdminDashBoardPage(driver);
+	}
 	
 	//--------------------------------------------------
 	public HomePageObject userAbleToLogout(WebDriver driver) {
