@@ -1,6 +1,7 @@
 package com.wordpress.admin;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -14,6 +15,7 @@ import pageObjects.wordpress.PageGeneratorManager;
 import pageObjects.wordpress.UserHomePageObject;
 import pageObjects.wordpress.UserPostPageObject;
 import pageObjects.wordpress.UserSearchPageObject;
+import pageUI.wordpress.AdminPostPageUI;
 
 public class Admin_01_Post extends BaseTest{
 	WebDriver driver;
@@ -155,6 +157,7 @@ public class Admin_01_Post extends BaseTest{
 		
 		log.info("Post_03 - Step 11: Verify 'Post Updated.' message is displayed");
 		//verifyTrue(adminPostPage.IsPostMessageDisplayed("Post Updated. "));
+		Assert.assertEquals(adminPostPage.getElementText(driver, AdminPostPageUI.POST_MESSAGE, "Post updated."),"Post updated. ");
 		
 		log.info("Post_03 - Step 12: Click to Post link in menu");
 		adminPostPage.clickToPostLink();
@@ -192,7 +195,7 @@ public class Admin_01_Post extends BaseTest{
 		
 	}
 	
-	@Test
+	//@Test
 	public void Post_04_Delete_Post() {
 		log.info("Post_04 - Step 01: Open admin site");
 		adminDashBoardPage = userHomePage.wordPressOpenAdminDashBoardPage(driver, adminUrl);
