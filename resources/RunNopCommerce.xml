@@ -20,7 +20,7 @@
     </classes>
     -->
     <classes>
-    <class name="com.nopcommerce.user.Level_22_Close_Browser"/>
+    <class name="com.nopcommerce.user.Level_24_Data_Faker"/>
     </classes>
     
 </test>
