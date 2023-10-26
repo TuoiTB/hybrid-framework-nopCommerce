@@ -9,11 +9,11 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
+import data.nopCommerce.Account_External_Json_File;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import nopCommerce.Account_External_Json_File;
 import pageObjects.users.HomePageObject;
 import pageObjects.users.PageGeneratorManager;
 import pageObjects.users.RegisterPageObject;

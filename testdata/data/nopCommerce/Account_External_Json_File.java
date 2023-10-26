@@ -1,4 +1,4 @@
-package nopCommerce;
+package data.nopCommerce;
 
 import java.io.File;
 

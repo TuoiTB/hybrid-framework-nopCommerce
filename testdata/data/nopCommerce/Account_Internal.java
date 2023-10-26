@@ -1,4 +1,4 @@
-package nopCommerce;
+package data.nopCommerce;
 
 public class Account_Internal {
 	public static class Register {

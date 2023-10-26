@@ -36,7 +36,7 @@ public class Level_25_3_Data_Internal_File extends BaseTest {
 		driver = getBrowserDriver(browserName, userUrl);
 		homePage = PageGeneratorManager.getHomePage(driver);
 		registerPage = PageGeneratorManager.getRegisterPage(driver);
-		emailAddress = nopCommerce.Account_Internal.Register.PRE_EMAIL_ADDRESS + getNumberRandom() + nopCommerce.Account_Internal.Register.WEB_EMAIL_SERVER;
+		emailAddress = data.nopCommerce.Account_Internal.Register.PRE_EMAIL_ADDRESS + getNumberRandom() + data.nopCommerce.Account_Internal.Register.WEB_EMAIL_SERVER;
 	}
 	@Description("User_01_Validate register form")
 	@Story("Register")
@@ -60,15 +60,15 @@ public class Level_25_3_Data_Internal_File extends BaseTest {
 		
 		registerPage.refreshCurrentPage(driver);
 		registerPage = homePage.clickToRegisterLink();
-		registerPage.enterToFirstNameTextbox(nopCommerce.Account_Internal.Register.FIRST_NAME);
+		registerPage.enterToFirstNameTextbox(data.nopCommerce.Account_Internal.Register.FIRST_NAME);
 		
-		registerPage.enterToLastNameTextbox(nopCommerce.Account_Internal.Register.LAST_NAME);
+		registerPage.enterToLastNameTextbox(data.nopCommerce.Account_Internal.Register.LAST_NAME);
 		
 		registerPage.enterToEmailTextbox(emailAddress);
 		
-		registerPage.enterToPasswordTextbox(nopCommerce.Account_Internal.Register.PASSWORD);
+		registerPage.enterToPasswordTextbox(data.nopCommerce.Account_Internal.Register.PASSWORD);
 		
-		registerPage.enterToConfirmPasswordTextbox(nopCommerce.Account_Internal.Register.PASSWORD);
+		registerPage.enterToConfirmPasswordTextbox(data.nopCommerce.Account_Internal.Register.PASSWORD);
 	
 		registerPage.clickToRegisterButton();
 		
