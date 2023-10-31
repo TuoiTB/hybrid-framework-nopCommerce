@@ -1,14 +1,4 @@
-[28-09-2023 19:38:28.790 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 01: Click to Log Register link
-[28-09-2023 19:38:29.899 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 02: Enter to First Name textbox
-[28-09-2023 19:38:30.056 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 03: Enter to Last Name textbox
-[28-09-2023 19:38:30.200 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 04: Enter to Email textbox
-[28-09-2023 19:38:30.350 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 05: Enter to Password textbox
-[28-09-2023 19:38:30.471 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 06: Enter to Confirm Password textbox
-[28-09-2023 19:38:30.601 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 07: Click to Register button
-[28-09-2023 19:38:31.413 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 08: Verify success message is displayed
-[28-09-2023 19:38:31.475 INFO com.nopcommerce.user.Level_21_Pattern_Object] - ----------PASSED----------
-[28-09-2023 19:38:31.476 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 09: Click to Log in link
-[28-09-2023 19:38:31.938 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 10: Enter to Email textbox
-[28-09-2023 19:38:32.074 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 11: Enter to Password textbox
-[28-09-2023 19:38:32.201 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 12: Click to Login button
-[28-09-2023 19:38:32.985 INFO com.nopcommerce.user.Level_21_Pattern_Object] - User_01 - Step 13: Click to Logout link
+[31-10-2023 22:50:31.894 INFO com.jquery.table.Level_14_Upload_Multiple_Files] - OS name = windows 10
+[31-10-2023 22:50:31.898 INFO com.jquery.table.Level_14_Upload_Multiple_Files] - Driver instance name = chromedriver: chrome on windows (c1dcda1b12a15b2029c9d20f69f90de4)
+[31-10-2023 22:50:47.808 INFO com.jquery.table.Level_14_Upload_Multiple_Files] - OS name = windows 10
+[31-10-2023 22:50:47.809 INFO com.jquery.table.Level_14_Upload_Multiple_Files] - Driver instance name = firefoxdriver: firefox on windows (5600dc51-36a1-41e3-afc0-4677534fe4d8)

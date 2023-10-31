@@ -47,6 +47,7 @@ public class Level_25_4_Data_External_File_Exel extends BaseTest {
 		password = faker.getPassword();
 		emailAddress = faker.getEmailAddress();
 	}
+	
 	@Description("User_01_Validate register form")
 	@Story("Register")
 	@Test
