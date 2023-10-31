@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="NopCommerce - UI Automation">
-<parameter name = "userUrl" value = "https://demo.nopcommerce.com/"/>
- <parameter name = "adminUrl" value = "https://admin-demo.nopcommerce.com"/> 
+	<parameter name="userUrl" value="https://demo.nopcommerce.com/" />
+	<parameter name="adminUrl" value="https://admin-demo.nopcommerce.com" />
 
-<listeners>
-      <listener class-name="commons.MethodListener"/>
-      <listener class-name="reportConfig.AllureTestListener"/>
-</listeners>
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.AllureTestListener" />
+	</listeners>
 
-<test name="Run on Chrome" preserve-order="true">
-  	<parameter name = "browser" value = "chrome"/>
- 	<!-- Run with Share/ Cookie
+	<test name="Run on Chrome" preserve-order="true">
+		<parameter name="browser" value="chrome" />
+		<!-- Run with Share/ Cookie
  	<classes>
       <class name="com.nopcommerce.cookie.Common_Register"/>
       <class name="com.nopcommerce.cookie.Order"/>
@@ -19,9 +19,10 @@
       <class name="com.nopcommerce.cookie.Payment"/>
     </classes>
     -->
-    <classes>
-    <class name="com.nopcommerce.user.Level_25_5_Data_External_File_Json"/>
-    </classes>
-    
-</test>
+		<classes>
+			<class
+				name="com.nopcommerce.user.Level_25_5_Data_External_File_Json" />
+		</classes>
+
+	</test>
 </suite>
