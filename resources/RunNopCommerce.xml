@@ -20,7 +20,7 @@
     </classes>
     -->
 		<classes>
-			<class name="com.nopcommerce.user.Level_25_5_Data_External_File_Json" />
+			<class name="com.nopcommerce.user.Level_16_Log" />
 		</classes>
 
 	</test>
