@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import graphql.Assert;
 import pageObjects.jquery.PageGeneratorManager;
-import pageObjects.users.UploadPageObject;
+import pageObjects.jquery.UploadPageObject;
 
 
 public class Level_14_Upload_Multiple_Files extends BaseTest {

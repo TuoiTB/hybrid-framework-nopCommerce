@@ -1,4 +1,2 @@
-[31-10-2023 22:50:31.894 INFO com.jquery.table.Level_14_Upload_Multiple_Files] - OS name = windows 10
-[31-10-2023 22:50:31.898 INFO com.jquery.table.Level_14_Upload_Multiple_Files] - Driver instance name = chromedriver: chrome on windows (c1dcda1b12a15b2029c9d20f69f90de4)
-[31-10-2023 22:50:47.808 INFO com.jquery.table.Level_14_Upload_Multiple_Files] - OS name = windows 10
-[31-10-2023 22:50:47.809 INFO com.jquery.table.Level_14_Upload_Multiple_Files] - Driver instance name = firefoxdriver: firefox on windows (5600dc51-36a1-41e3-afc0-4677534fe4d8)
+[01-11-2023 20:33:21.408 INFO com.nopcommerce.user.Level_22_Close_Browser] - OS name = windows 10
+[01-11-2023 20:33:21.412 INFO com.nopcommerce.user.Level_22_Close_Browser] - Driver instance name = chromedriver: chrome on windows (326fcf09fbc68d683a56eef3c68ce362)
